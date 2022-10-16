@@ -1,0 +1,24 @@
+class Solution {
+    public boolean isPalindrome(int x) 
+    {
+        int rev = 0;
+        int num = x;
+        boolean flag = false;
+        if(x<0)
+            flag = false;
+        else
+        {
+            while(num > 0)
+            {
+                int digit = num%10;
+                rev = rev*10+digit;
+                num = num/10;
+            }
+            if(x == rev)
+            {
+                flag = true;
+            }
+        }
+        return flag;
+    }
+}
